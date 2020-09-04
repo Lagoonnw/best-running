@@ -1,8 +1,18 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import axios from 'axios';
 
 function App() {
+  const makeApiRequest = () => {
+    console.log('WORK here', );
+    axios
+      .get('/api/testwithcurrentuser')
+      .then(response => {
+        console.log('response', response);
+      })
+  };
+  
   return (
     <div className="App">
       <header className="App-header">
@@ -16,8 +26,10 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React learn from docker
+          Learn React learn from
         </a>
+        <button
+          onClick={makeApiRequest}>Make api request</button>
       </header>
     </div>
   );

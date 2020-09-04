@@ -37,6 +37,12 @@ app.get('/testwithcurrentuser', (req, res) => {
     })
 });
 
+app.get('/api/testapidata', (req, res) => {
+  res.json({
+    testapidata: true
+  });
+});
+
 connectDb()
   .on('error', console.log)
   .on('disconnected', connectDb)
