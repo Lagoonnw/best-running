@@ -3,9 +3,9 @@ import { compose }                             from "recompose";
 import createSagaMiddleware                    from 'redux-saga';
 import { routerMiddleware }                    from 'connected-react-router';
 import { reducer }                             from "./reducers/root.reducer";
+import { History }                             from "history";
 
-// @ts-ignore
-export const initStore = (history): Store => {
+export const initStore = (history: History): Store => {
   const sagaMiddleware = createSagaMiddleware();
   const middlewares = [sagaMiddleware, routerMiddleware(history)];
   const middlewareEnhancer = applyMiddleware(...middlewares);
