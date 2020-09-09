@@ -17,10 +17,7 @@ const init = (): void => {
   ReactDOM.render(
     <Provider store={store}>
       <ConnectedRouter history={history}>
-        <Switch>
-          <Route exact path="/" component={App}/>
-          <Route path="*" render={() => ( <h1>PAGE NOT FOUND</h1> )}/>
-        </Switch>
+        <App/>
       </ConnectedRouter>
     </Provider>
     , document.getElementById('root'))
