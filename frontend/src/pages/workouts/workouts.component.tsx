@@ -59,23 +59,23 @@ export class WorkoutsComponent extends PureComponent<TState, any> {
           </tr>
           </thead>
           <tbody>
-          <tr>
-            <th scope="row">1</th>
-            
-            {this.props.workouts.map(w => (<td key={w.id}>{w.type}</td>))}
-          </tr>
-          <tr>
-            <th scope="row">2</th>
-            <td>Jacob</td>
-            <td>Thornton</td>
-            <td>@fat</td>
-          </tr>
-          <tr>
-            <th scope="row">3</th>
-            <td>Larry</td>
-            <td>the Bird</td>
-            <td>@twitter</td>
-          </tr>
+          {this.props.workouts.map((w, i) => (
+            <tr key={w.id}>
+              <th scope="row">
+                {i + 1}
+              </th>
+              <td>
+                {w.type}
+              </td>
+              <td>
+                {w.getDistance()}
+              </td>
+              <td>
+                {w.getFormattedDate()}
+              </td>
+            </tr>
+          ))}
+   
           </tbody>
         </Table>
       </Container>

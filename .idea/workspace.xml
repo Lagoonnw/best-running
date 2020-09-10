@@ -5,17 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1dca5eb2-6136-485c-93de-ebbb56cbec21" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/frontend/src/__mock__/data.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/pages/workouts/workouts.container.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/store/reducers/workouts.reducer.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/tslint.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/helpers/helpers.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/models/Workout.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/__mock__/data.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/__mock__/data.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/pages/workouts/workouts.component.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/workouts/workouts.component.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/store/reducers/root.reducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/store/reducers/root.reducer.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/store/reducers/settings.reducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/store/reducers/settings.reducer.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/store/reducers/workouts.reducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/store/reducers/workouts.reducer.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -100,7 +95,7 @@
       <workItem from="1599284573865" duration="21000" />
       <workItem from="1599633744305" duration="4579000" />
       <workItem from="1599642810865" duration="15966000" />
-      <workItem from="1599705427229" duration="5138000" />
+      <workItem from="1599705427229" duration="9273000" />
     </task>
     <task id="LOCAL-00001" summary="- nginx">
       <created>1599204823761</created>
@@ -137,7 +132,14 @@
       <option name="project" value="LOCAL" />
       <updated>1599661378839</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary=":frontend:&#10;- tslint.json&#10;- container">
+      <created>1599710713999</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1599710713999</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -151,17 +153,22 @@
     <MESSAGE value=":frontend:&#10;- redux&#10;- middlewares&#10;- config store&#10;- connected router" />
     <MESSAGE value=":frontend:&#10;- history type" />
     <MESSAGE value=":frontend:&#10;- emotion" />
-    <option name="LAST_COMMIT_MESSAGE" value=":frontend:&#10;- emotion" />
+    <MESSAGE value=":frontend:&#10;- tslint.json&#10;- container" />
+    <option name="LAST_COMMIT_MESSAGE" value=":frontend:&#10;- tslint.json&#10;- container" />
   </component>
   <component name="WindowStateProjectService">
     <state x="644" y="353" key="#TSLint" timestamp="1599709613114">
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
     <state x="644" y="353" key="#TSLint/0.0.1920.1160@0.0.1920.1160" timestamp="1599709613114" />
-    <state x="0" y="0" key="CommitChangelistDialog2" timestamp="1599661378303">
+    <state x="876" y="305" key="#com.intellij.ide.util.MemberChooser" timestamp="1599712694741">
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
-    <state x="0" y="0" key="CommitChangelistDialog2/0.0.1920.1160@0.0.1920.1160" timestamp="1599661378303" />
+    <state x="876" y="305" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1160@0.0.1920.1160" timestamp="1599712694741" />
+    <state x="0" y="0" key="CommitChangelistDialog2" timestamp="1599710713184">
+      <screen x="0" y="0" width="1920" height="1160" />
+    </state>
+    <state x="0" y="0" key="CommitChangelistDialog2/0.0.1920.1160@0.0.1920.1160" timestamp="1599710713184" />
     <state x="0" y="612" key="FileChooserDialogImpl" timestamp="1599709755167">
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
