@@ -1,7 +1,7 @@
 import React, { Fragment }     from 'react';
 import './App.css';
 import { Switch, Route, Link } from 'react-router-dom';
-import { WorkoutsComponent }   from "./pages/workouts/workouts.component";
+import WorkoutsComponent from "./pages/workouts/workouts.container";
 
 function App() {
   return (

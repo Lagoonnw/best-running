@@ -1,0 +1,69 @@
+{
+  "defaultSeverity": "error",
+  "extends": [
+    "tslint:recommended",
+    "tslint-react"
+  ],
+  "jsRules": {},
+  "rules": {
+    "no-empty-interface": true,
+    "no-duplicate-switch-case": true,
+    "no-duplicate-super": true,
+    "no-empty": [
+      true,
+      "allow-empty-functions"
+    ],
+    "member-ordering": false,
+    "member-access": false,
+    "no-duplicate-variable": true,
+    "no-console": [
+      true,
+      "log"
+    ],
+    "adjacent-overload-signatures": false,
+    "no-shadowed-variable": false,
+    "only-arrow-functions": false,
+    "static-this": true,
+    "triple-equals": true,
+    "trailing-comma": false,
+    "unnecessary-constructor": true,
+    "use-isnan": true,
+    "no-duplicate-imports": [
+      true
+    ],
+    "no-string-literal": false,
+    "prefer-const": true,
+    "array-type": [
+      true,
+      "array"
+    ],
+    "arrow-return-shorthand": true,
+    "interface-name": [
+      true,
+      "always-prefix"
+    ],
+    "no-unnecessary-initializer": true,
+    "prefer-switch": true,
+    "switch-final-break": true,
+    "unnecessary-else": true,
+    "import-spacing": false,
+    "ordered-imports": false,
+    "semicolon": [
+      true,
+      "always",
+      "ignore-bound-class-methods"
+    ],
+    "whitespace": false,
+    "quotemark": [
+      true,
+      "single",
+      "jsx-double"
+    ],
+    "jsx-no-multiline-js": false,
+    "variable-name": false,
+    "object-literal-sort-keys": false,
+    "one-line": false,
+    "no-any": false
+  },
+  "rulesDirectory": []
+}

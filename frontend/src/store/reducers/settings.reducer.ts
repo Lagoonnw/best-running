@@ -1,10 +1,10 @@
-import { Action, handleActions } from 'redux-actions'
+import { Action, handleActions } from 'redux-actions';
 
 export interface State {
   theme: string
 }
 
-const initialState = {
+const initialState: State = {
   theme: 'dark'
 }
 
