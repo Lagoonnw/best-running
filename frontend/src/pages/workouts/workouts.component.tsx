@@ -1,12 +1,16 @@
-import React, { PureComponent, ReactNode, Fragment, useState }                        from 'react';
-import { css, jsx }                                                                   from "@emotion/core";
-import styled                                                                         from '@emotion/styled'
+import React, { PureComponent, ReactNode, Fragment} from 'react';
+import { css, jsx }     from "@emotion/core";
+import styled           from '@emotion/styled'
 import {
   Container,
   Row,
   Col,
-  Table, UncontrolledDropdown, Dropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap';
-import { TState }                                                                     from "./workouts.container";
+  Table, Dropdown, DropdownToggle, DropdownMenu, DropdownItem
+}                       from 'reactstrap';
+import { TState }       from "./workouts.container";
+import { workoutTypes } from "../../constants/constants";
+import { Workout }      from "../../models/Workout";
+import { Filter }       from "../../components/filter/filter";
 
 const Heading = styled.h1`
 //@ts-ignore
@@ -16,18 +20,24 @@ const Heading = styled.h1`
 `;
 
 export class WorkoutsComponent extends PureComponent<TState, any> {
-  isOpen: boolean = false;
+  // isOpen: boolean = false;
   constructor(props: TState) {
     super(props);
+    this.state = {
+      isOpen  : false,
+      workouts: props.workouts
+    }
     
     console.log('PROPS', props)
     // this.isOpen = false
   }
   
-  toggle = () => {
-    console.log('is open', this.isOpen );
-    this.isOpen = !this.isOpen;
-  };
+  onFilterChange = (v: any) => {
+    console.log('VALUE FROM FILTER', v);
+  }
+  
+
+ 
   
   public render(): ReactNode {
     //@ts-ignore
@@ -36,30 +46,10 @@ export class WorkoutsComponent extends PureComponent<TState, any> {
       <Container>
         <Table>
           <thead>
-          <tr>
-            <th>#</th>
-            <th>
-              <UncontrolledDropdown>
-                <DropdownToggle caret>
-                  Dropdown
-                </DropdownToggle>
-                <DropdownMenu>
-                  <DropdownItem header>Header</DropdownItem>
-                  <DropdownItem>Some Action</DropdownItem>
-                  <DropdownItem disabled>Action (disabled)</DropdownItem>
-                  <DropdownItem divider />
-                  <DropdownItem>Foo Action</DropdownItem>
-                  <DropdownItem>Bar Action</DropdownItem>
-                  <DropdownItem>Quo Action</DropdownItem>
-                </DropdownMenu>
-              </UncontrolledDropdown>
-            </th>
-            <th>Last Name</th>
-            <th>Username</th>
-          </tr>
+          <Filter onChange={this.onFilterChange}/>
           </thead>
           <tbody>
-          {this.props.workouts.map((w, i) => (
+          {this.state.workouts.map((w: Workout, i: number) => (
             <tr key={w.id}>
               <th scope="row">
                 {i + 1}
@@ -75,7 +65,7 @@ export class WorkoutsComponent extends PureComponent<TState, any> {
               </td>
             </tr>
           ))}
-   
+          
           </tbody>
         </Table>
       </Container>

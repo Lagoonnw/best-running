@@ -5,12 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1dca5eb2-6136-485c-93de-ebbb56cbec21" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/frontend/src/helpers/helpers.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/models/Workout.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/components/filter/filter.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/constants/constants.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/__mock__/data.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/__mock__/data.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/pages/workouts/workouts.component.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/workouts/workouts.component.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/store/reducers/workouts.reducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/store/reducers/workouts.reducer.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/pages/workouts/workouts.container.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/workouts/workouts.container.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,6 +22,7 @@
       <list>
         <option value="JavaScript File" />
         <option value="TypeScript File" />
+        <option value="TypeScript JSX File" />
       </list>
     </option>
   </component>
@@ -95,7 +96,7 @@
       <workItem from="1599284573865" duration="21000" />
       <workItem from="1599633744305" duration="4579000" />
       <workItem from="1599642810865" duration="15966000" />
-      <workItem from="1599705427229" duration="9273000" />
+      <workItem from="1599705427229" duration="21387000" />
     </task>
     <task id="LOCAL-00001" summary="- nginx">
       <created>1599204823761</created>
@@ -139,7 +140,14 @@
       <option name="project" value="LOCAL" />
       <updated>1599710713999</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary=":frontend:&#10;- workout model">
+      <created>1599715115831</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1599715115831</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -154,7 +162,8 @@
     <MESSAGE value=":frontend:&#10;- history type" />
     <MESSAGE value=":frontend:&#10;- emotion" />
     <MESSAGE value=":frontend:&#10;- tslint.json&#10;- container" />
-    <option name="LAST_COMMIT_MESSAGE" value=":frontend:&#10;- tslint.json&#10;- container" />
+    <MESSAGE value=":frontend:&#10;- workout model" />
+    <option name="LAST_COMMIT_MESSAGE" value=":frontend:&#10;- workout model" />
   </component>
   <component name="WindowStateProjectService">
     <state x="644" y="353" key="#TSLint" timestamp="1599709613114">
@@ -165,10 +174,10 @@
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
     <state x="876" y="305" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1160@0.0.1920.1160" timestamp="1599712694741" />
-    <state x="0" y="0" key="CommitChangelistDialog2" timestamp="1599710713184">
+    <state x="0" y="0" key="CommitChangelistDialog2" timestamp="1599715115240">
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
-    <state x="0" y="0" key="CommitChangelistDialog2/0.0.1920.1160@0.0.1920.1160" timestamp="1599710713184" />
+    <state x="0" y="0" key="CommitChangelistDialog2/0.0.1920.1160@0.0.1920.1160" timestamp="1599715115240" />
     <state x="0" y="612" key="FileChooserDialogImpl" timestamp="1599709755167">
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
@@ -191,10 +200,14 @@
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
     <state x="636" y="411" key="jetbrains.nodejs.interpreters-dialog/0.0.1920.1160@0.0.1920.1160" timestamp="1599709528350" />
-    <state x="855" y="481" width="672" height="678" key="search.everywhere.popup" timestamp="1599655955185">
+    <state x="599" y="473" key="run.anything.popup" timestamp="1599723295010">
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
-    <state x="855" y="481" width="672" height="678" key="search.everywhere.popup/0.0.1920.1160@0.0.1920.1160" timestamp="1599655955185" />
+    <state x="599" y="473" key="run.anything.popup/0.0.1920.1160@0.0.1920.1160" timestamp="1599723295010" />
+    <state x="855" y="481" width="672" height="678" key="search.everywhere.popup" timestamp="1599739853121">
+      <screen x="0" y="0" width="1920" height="1160" />
+    </state>
+    <state x="855" y="481" width="672" height="678" key="search.everywhere.popup/0.0.1920.1160@0.0.1920.1160" timestamp="1599739853121" />
   </component>
   <component name="masterDetails">
     <states>
