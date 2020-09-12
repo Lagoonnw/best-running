@@ -4,7 +4,7 @@ export interface WorkoutProps {
   readonly id: string | null,
   type: string | null,
   distance: number,
-  date: Date | null
+  date: Date
 }
 
 export interface WorkoutModel extends WorkoutProps {
@@ -16,7 +16,7 @@ export class Workout implements WorkoutModel {
     readonly id: string | null = null;
     type: string | null = null;
     distance: number = 0;
-    date: Date | null = null;
+    date: Date = new Date(Date.now());
   
   constructor(props?: WorkoutProps) {
     if (props) {

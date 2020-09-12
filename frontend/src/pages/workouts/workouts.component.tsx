@@ -1,43 +1,52 @@
-import React, { PureComponent, ReactNode, Fragment} from 'react';
-import { css, jsx }     from "@emotion/core";
-import styled           from '@emotion/styled'
+import React, { PureComponent, ReactNode }    from 'react';
 import {
   Container,
-  Row,
-  Col,
-  Table, Dropdown, DropdownToggle, DropdownMenu, DropdownItem
-}                       from 'reactstrap';
-import { TState }       from "./workouts.container";
-import { workoutTypes } from "../../constants/constants";
-import { Workout }      from "../../models/Workout";
-import { Filter }       from "../../components/filter/filter";
-
-const Heading = styled.h1`
-//@ts-ignore
-  background-color: ${props => props[`bg`]};
-  //@ts-ignore
-  color: ${props => props[`fg`]};
-`;
+  Table,
+}                                             from 'reactstrap';
+import { TState }                             from "./workouts.container";
+import { Workout }                            from "../../models/Workout";
+import { Filter }                             from "../../components/filter/filter";
+import { WorkoutList }                        from "../../components/workout-list/workout-list";
+import { dateSort, distanceSort, typeFilter } from "../../helpers/helpers";
 
 export class WorkoutsComponent extends PureComponent<TState, any> {
-  // isOpen: boolean = false;
   constructor(props: TState) {
     super(props);
     this.state = {
       isOpen  : false,
       workouts: props.workouts
     }
+  }
+  
+  onFilterChange = (filter: { type: string, value: string | null }): void => {
+    const {type, value} = filter;
+    if ( !value ) {
+      this.setState((_: any, props: { workouts: Workout[]; }) => {
+        return {
+          workouts: [...props.workouts]
+        }
+      })
+    }
     
-    console.log('PROPS', props)
-    // this.isOpen = false
+    if ( value && type === 'type' ) {
+      this.setState((_: any, props: { workouts: Workout[]; }) => ( {
+        workouts: typeFilter([...props.workouts], value)
+      } ))
+    }
+    
+    if ( value && type === 'distance' ) {
+      this.setState((_: any, props: { workouts: Workout[]; }) => ( {
+        workouts: distanceSort([...props.workouts], value)
+      } ));
+    }
+    
+    if ( value && type === 'date' ) {
+      this.setState((_: any, props: { workouts: Workout[]; }) => ( {
+        workouts: dateSort([...props.workouts], value)
+      } ))
+    }
   }
   
-  onFilterChange = (v: any) => {
-    console.log('VALUE FROM FILTER', v);
-  }
-  
-
- 
   
   public render(): ReactNode {
     //@ts-ignore
@@ -49,23 +58,7 @@ export class WorkoutsComponent extends PureComponent<TState, any> {
           <Filter onChange={this.onFilterChange}/>
           </thead>
           <tbody>
-          {this.state.workouts.map((w: Workout, i: number) => (
-            <tr key={w.id}>
-              <th scope="row">
-                {i + 1}
-              </th>
-              <td>
-                {w.type}
-              </td>
-              <td>
-                {w.getDistance()}
-              </td>
-              <td>
-                {w.getFormattedDate()}
-              </td>
-            </tr>
-          ))}
-          
+          <WorkoutList workouts={this.state.workouts}/>
           </tbody>
         </Table>
       </Container>
