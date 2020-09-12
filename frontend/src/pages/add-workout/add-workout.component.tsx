@@ -1,5 +1,5 @@
-import React, { PureComponent }               from 'react';
-import { Container, Row }                          from 'reactstrap';
+import React, { PureComponent }                     from 'react';
+import { Container, Row, Form, Input, Button, Col, FormGroup, Label } from 'reactstrap';
 // import {
 //   Container,
 //   FormGroup,
@@ -8,155 +8,125 @@ import { Container, Row }                          from 'reactstrap';
 //   FormText,
 //   Button
 // } from "reactstrap";
-import { Formik, Field, Form, FormikHelpers } from 'formik';
-import { useFormik } from 'formik';
-import * as Yup from 'yup';
+// import { Formik, Field, Form, FormikHelpers } from 'formik';
+import { useFormik }                                from 'formik';
+import * as Yup                                     from 'yup';
 
 interface Values {
-  firstName: string;
-  lastName: string;
-  email: string;
+  type: string;
+  distance: string;
+  date: string;
 }
-const validate = (values: Values) => {
-  const errors = {} as Values;
-  
-  if (!values.firstName) {
-    errors.firstName = 'Required';
-  } else if (values.firstName.length > 15) {
-    errors.firstName = 'Must be 15 characters or less';
-  }
-  
-  if (!values.lastName) {
-    errors.lastName = 'Required';
-  } else if (values.lastName.length > 20) {
-    errors.lastName = 'Must be 20 characters or less';
-  }
-  
-  if (!values.email) {
-    errors.email = 'Required';
-  } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.email)) {
-    errors.email = 'Invalid email address';
-  }
-  
-  return errors;
+
+// const validate = (values: Values) => {
+//   const errors = {} as Values;
+//
+//   if ( !values.firstName ) {
+//     errors.firstName = 'Required';
+//   }
+//   else if ( values.firstName.length > 15 ) {
+//     errors.firstName = 'Must be 15 characters or less';
+//   }
+//
+//   if ( !values.lastName ) {
+//     errors.lastName = 'Required';
+//   }
+//   else if ( values.lastName.length > 20 ) {
+//     errors.lastName = 'Must be 20 characters or less';
+//   }
+//
+//   if ( !values.email ) {
+//     errors.email = 'Required';
+//   }
+//   else if ( !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.email) ) {
+//     errors.email = 'Invalid email address';
+//   }
+//
+//   return errors;
+// };
+
+const validateDistance = (value: any) => {
+  console.log('validate',value)
+  return true;
 };
 
 export const AddWorkoutComponent = (props: any) => {
   const formik = useFormik({
-    initialValues: {
-      firstName: '',
-      lastName: '',
-      email: '',
+    initialValues   : {
+      type: 'Skiing',
+      distance : 1,
+      date    : new Date()
+        .toLocaleString('en-Gb', { year: 'numeric', month: 'numeric', day: 'numeric' })
+        .split('/')
+        .reverse()
+        .join('-'),
     },
     validationSchema: Yup.object({
-      firstName: Yup.string()
-        .max(15, 'Must be 15 characters or less')
+      type: Yup.string()
         .required('Required'),
-      lastName: Yup.string()
-        .max(20, 'Must be 20 characters or less')
+      distance : Yup.string()
+        .min(1, 'Must be positive')
         .required('Required'),
-      email: Yup.string()
-        .email('Invalid email address')
+      date    : Yup.string()
         .required('Required'),
     }),
-    onSubmit: values => {
-      alert(JSON.stringify(values, null, 2));
+    onSubmit        : values => {
+      console.log('submit', );
+      console.log(values);
     },
   });
-  return(
+  return (
     <Container>
-      <form onSubmit={formik.handleSubmit}>
+      <Form onSubmit={formik.handleSubmit}>
         <Row>
-          <label htmlFor="firstName">First Name</label>
-          <input
-            id="firstName"
-            type="text"
-            {...formik.getFieldProps('firstName')}
-          />
-          {formik.touched.firstName && formik.errors.firstName ? (
-            <div>{formik.errors.firstName}</div>
-          ) : null}
-        </Row>
-        <Row>
-          <label htmlFor="lastName">Last Name</label>
-          <input
-            id="lastName"
-            type="text"
-            {...formik.getFieldProps('lastName')}
-          />
-          {formik.touched.lastName && formik.errors.lastName ? (
-            <div>{formik.errors.lastName}</div>
-          ) : null}
-        </Row>
-        <Row>
-          <label htmlFor="email">Email Address</label>
-          <input
-            id="email"
-            type="email"
-            {...formik.getFieldProps('email')}
-          />
-          {formik.touched.email && formik.errors.email ? (
-            <div>{formik.errors.email}</div>
-          ) : null}
+          <Col sm={{size: 3, order: 1}}/>
+          <Col sm={{size: 6, order: 2}}>
+            <FormGroup>
+              <Label htmlFor="type" for="type">Select a workout type</Label>
+              <Input type="select" name="type" id="type" {...formik.getFieldProps('type')}>
+                <option>Skiing</option>
+                <option>Walk</option>
+                <option>Running</option>
+                <option>Bike</option>
+              </Input>
+              {formik.touched.type && formik.errors.type ? (
+                <div>{formik.errors.type}</div>
+              ) : null}
+            </FormGroup>
+            
+            
+            <Label htmlFor="distance" for="distance">Distance (m)</Label>
+            <Input
+              id="distance"
+              type="number"
+              min="1"
+              {...formik.getFieldProps('distance')}
+            />
+            {formik.touched.distance && formik.errors.distance ? (
+              <div>{formik.errors.distance}</div>
+            ) : null}
+  
+            
+         
+            
+            <Label htmlFor="date" for="date">Date</Label>
+            <Input
+              id="date"
+              type="date"
+              {...formik.getFieldProps('date')}
+            />
+            {formik.touched.date && formik.errors.date ? (
+              <div>{formik.errors.date}</div>
+            ) : null}
+  
+            <button type="submit">Submit</button>
           
+          </Col>
+          <Col sm={{size: 3, order: 3}}/>
         </Row>
-        <Row>
-          <button type="submit">Submit</button>
-        </Row>
-      </form>
+      
+      </Form>
     </Container>
   )
 }
 
-
-// export class AddWorkoutComponent extends PureComponent<any, any> {
-//   constructor(props: any) {
-//     super(props);
-//   }
-//
-//   render() {
-//     return (
-//       <Container>
-//         <h1>Form</h1>
-//         <Formik
-//           initialValues={{
-//             firstName: '',
-//             lastName : '',
-//             email    : '',
-//           }}
-//           onSubmit={(
-//             values: Values,
-//             {setSubmitting}: FormikHelpers<Values>
-//           ) => {
-//             setTimeout(() => {
-//               alert(JSON.stringify(values, null, 2));
-//               setSubmitting(false);
-//             }, 500);
-//           }}
-//         >
-//           <Form>
-//             <label htmlFor="firstName">First Name</label>
-//             <Field id="firstName" name="firstName" placeholder="John"/>
-//
-//             <label htmlFor="lastName">Last Name</label>
-//             <Field id="lastName" name="lastName" placeholder="Doe"/>
-//
-//             <label htmlFor="email">Email</label>
-//             <Field
-//               id="email"
-//               name="email"
-//               placeholder="john@acme.com"
-//               type="email"
-//             />
-//
-//             <button type="submit">Submit</button>
-//
-//           </Form>
-//
-//         </Formik>
-//
-//
-//       </Container>
-//     );
-//   }
-// }

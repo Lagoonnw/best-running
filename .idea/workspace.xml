@@ -5,16 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1dca5eb2-6136-485c-93de-ebbb56cbec21" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/frontend/src/components/workout-list/workout-list.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/components/workout-row/workout-row.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/pages/add-workout/add-workout.component.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/helpers/helpers.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/helpers/helpers.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/models/Workout.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/models/Workout.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/pages/workouts/workouts.component.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/workouts/workouts.component.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/pages/add-workout/add-workout.component.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/add-workout/add-workout.component.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -101,7 +93,7 @@
       <workItem from="1599633744305" duration="4579000" />
       <workItem from="1599642810865" duration="15966000" />
       <workItem from="1599705427229" duration="31706000" />
-      <workItem from="1599830389896" duration="5314000" />
+      <workItem from="1599830389896" duration="10442000" />
     </task>
     <task id="LOCAL-00001" summary="- nginx">
       <created>1599204823761</created>
@@ -159,7 +151,14 @@
       <option name="project" value="LOCAL" />
       <updated>1599747912667</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary=":frontend:&#10;- form">
+      <created>1599885806128</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1599885806128</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -176,7 +175,8 @@
     <MESSAGE value=":frontend:&#10;- tslint.json&#10;- container" />
     <MESSAGE value=":frontend:&#10;- workout model" />
     <MESSAGE value=":frontend:&#10;- filter component" />
-    <option name="LAST_COMMIT_MESSAGE" value=":frontend:&#10;- filter component" />
+    <MESSAGE value=":frontend:&#10;- form" />
+    <option name="LAST_COMMIT_MESSAGE" value=":frontend:&#10;- form" />
   </component>
   <component name="WindowStateProjectService">
     <state x="644" y="353" key="#TSLint" timestamp="1599709613114">
@@ -187,10 +187,10 @@
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
     <state x="876" y="305" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1160@0.0.1920.1160" timestamp="1599712694741" />
-    <state x="0" y="0" key="CommitChangelistDialog2" timestamp="1599747912024">
+    <state x="0" y="0" key="CommitChangelistDialog2" timestamp="1599885805214">
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
-    <state x="0" y="0" key="CommitChangelistDialog2/0.0.1920.1160@0.0.1920.1160" timestamp="1599747912024" />
+    <state x="0" y="0" key="CommitChangelistDialog2/0.0.1920.1160@0.0.1920.1160" timestamp="1599885805214" />
     <state x="0" y="612" key="FileChooserDialogImpl" timestamp="1599709755167">
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
@@ -201,10 +201,10 @@
     </state>
     <state x="733" y="208" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1599284551374" />
     <state x="733" y="232" key="SettingsEditor/0.0.1920.1160@0.0.1920.1160" timestamp="1599709762954" />
-    <state x="475" y="516" key="Vcs.Push.Dialog.v2" timestamp="1599661350063">
+    <state x="475" y="516" key="Vcs.Push.Dialog.v2" timestamp="1599885998173">
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
-    <state x="475" y="516" key="Vcs.Push.Dialog.v2/0.0.1920.1160@0.0.1920.1160" timestamp="1599661350063" />
+    <state x="475" y="516" key="Vcs.Push.Dialog.v2/0.0.1920.1160@0.0.1920.1160" timestamp="1599885998173" />
     <state x="0" y="594" width="585" height="566" key="find.popup" timestamp="1599650635023">
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
