@@ -11,11 +11,16 @@ import { Container, Row, Form, Input, Button, Col, FormGroup, Label } from 'reac
 // import { Formik, Field, Form, FormikHelpers } from 'formik';
 import { useFormik }                                from 'formik';
 import * as Yup                                     from 'yup';
+import axios from 'axios';
 
 interface Values {
-  type: string;
-  distance: string;
+  workout_type: string;
+  distance: number;
   date: string;
+}
+
+const postWotkout = {
+
 }
 
 // const validate = (values: Values) => {
@@ -50,10 +55,26 @@ const validateDistance = (value: any) => {
   return true;
 };
 
+const postWorkout = (workout: Values) => {
+  const [year, month, day] = workout.date.split('-');
+  // console.log('model', responseType: "json");
+  axios.create({
+    baseURL: 'http://app-test.com/api',
+    responseType: "json"
+  }).post(
+    '/workouts', {...workout, date: new Date(+year, +month, +day)}
+  ).then(r => {
+    console.log('axios workout', r.data);
+  }).catch(err => {
+    console.log('error', err);
+  });
+  // axios.post('/workouts', {...workout, date: new Date(+year, +month, +day)})
+}
+
 export const AddWorkoutComponent = (props: any) => {
   const formik = useFormik({
     initialValues   : {
-      type: 'Skiing',
+      workout_type: 'Skiing',
       distance : 1,
       date    : new Date()
         .toLocaleString('en-Gb', { year: 'numeric', month: 'numeric', day: 'numeric' })
@@ -62,7 +83,7 @@ export const AddWorkoutComponent = (props: any) => {
         .join('-'),
     },
     validationSchema: Yup.object({
-      type: Yup.string()
+      workout_type: Yup.string()
         .required('Required'),
       distance : Yup.string()
         .min(1, 'Must be positive')
@@ -73,6 +94,7 @@ export const AddWorkoutComponent = (props: any) => {
     onSubmit        : values => {
       console.log('submit', );
       console.log(values);
+      postWorkout(values);
     },
   });
   return (
@@ -82,15 +104,15 @@ export const AddWorkoutComponent = (props: any) => {
           <Col sm={{size: 3, order: 1}}/>
           <Col sm={{size: 6, order: 2}}>
             <FormGroup>
-              <Label htmlFor="type" for="type">Select a workout type</Label>
-              <Input type="select" name="type" id="type" {...formik.getFieldProps('type')}>
+              <Label htmlFor="workout_type" for="workout_type">Select a workout type</Label>
+              <Input type="select" name="workout_type" id="workout_type" {...formik.getFieldProps('workout_type')}>
                 <option>Skiing</option>
                 <option>Walk</option>
                 <option>Running</option>
                 <option>Bike</option>
               </Input>
-              {formik.touched.type && formik.errors.type ? (
-                <div>{formik.errors.type}</div>
+              {formik.touched.workout_type && formik.errors.workout_type ? (
+                <div>{formik.errors.workout_type}</div>
               ) : null}
             </FormGroup>
             

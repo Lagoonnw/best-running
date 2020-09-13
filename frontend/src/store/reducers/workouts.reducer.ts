@@ -2,12 +2,15 @@ import { User }          from '../../__mock__/data';
 import { handleActions } from 'redux-actions';
 import { AppState }      from "./root.reducer";
 import { Workout }       from "../../models/Workout";
+import {WorkoutActions}  from "../actions/workouts";
 
 export type State = Array<{ [k: string]: any }>;
 
-const initialState: State = [...User.workouts.map(w => new Workout(w))];
+const initialState: State = [];
 
-export const reducer = handleActions({}, initialState);
+export const reducer = handleActions({
+  [WorkoutActions.set]: (state, action) => ([...action.payload])
+}, initialState);
 
 /*
  * Selectors

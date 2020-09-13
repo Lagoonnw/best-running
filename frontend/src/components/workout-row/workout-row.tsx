@@ -10,7 +10,7 @@ export const WorkoutRow = (props: { workout: Workout; index: number }) => {
       {index + 1}
     </th>
     <td>
-      {workout.type}
+      {workout.workout_type}
     </td>
     <td>
       {workout.getDistance()}

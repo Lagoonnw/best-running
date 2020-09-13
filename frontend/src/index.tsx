@@ -5,14 +5,16 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import App                      from './App';
 import * as serviceWorker       from './serviceWorker'
 import { Provider }             from "react-redux";
-import { Route, Switch }        from 'react-router-dom';
 import { createBrowserHistory } from 'history';
 import { ConnectedRouter }      from 'connected-react-router';
 import { initStore }            from "./store/store.config";
+// import { createAPI }            from "./services/api";
 
 const init = (): void => {
   const history = createBrowserHistory();
   const store = initStore(history);
+  
+  // const api = createAPI();
   
   ReactDOM.render(
     <Provider store={store}>

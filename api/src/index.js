@@ -1,47 +1,39 @@
 const express = require('express');
-const mongoose = require('mongoose');
-const axios = require('axios');
+const bodyParser = require('body-parser');
 const app = express();
 const {connectDb} = require('./helpers/db');
-const {host, port, db, authApiUrl} = require('./configuration');
-const postSchema = new mongoose.Schema({
-  name: String
-});
-const Post = mongoose.model('Post', postSchema);
+const {port, db} = require('./configuration');
+const workoutRouts = require('./routes/workout');
+
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
+
+app.use('/workouts', workoutRouts);
 
 const startServer = () => {
   app.listen(port, () => {
     console.log(`Started api on port ${port}`);
-    console.log(`Started api on host ${host}`);
     console.log(`Our database: ${db}`);
-    // const silence = new Post({name: 'Silence'});
-    // silence.save((err, savedSilence) => {
-    //   if (err) {
-    //     console.log(err);
-    //   }
-    //   console.log('savedSilence: ', savedSilence);
-    // });
-    // console.log(silence.name);
   });
 };
-app.get('/test', (req, res) => {
-  res.send('API WORKS!');
-});
+// app.get('/test', (req, res) => {
+//   res.send('API WORKS!');
+// });
+//
+// app.get('/testwithcurrentuser', (req, res) => {
+//   axios.get(`${authApiUrl}/currentUser`)
+//     .then(response => {
+//       res.json({
+//         currentUser: response.data
+//       })
+//     })
+// });
 
-app.get('/testwithcurrentuser', (req, res) => {
-  axios.get(`${authApiUrl}/currentUser`)
-    .then(response => {
-      res.json({
-        currentUser: response.data
-      })
-    })
-});
-
-app.get('/api/testapidata', (req, res) => {
-  res.json({
-    testapidata: true
-  });
-});
+// app.get('/api/testapidata', (req, res) => {
+//   res.json({
+//     testapidata: true
+//   });
+// });
 
 connectDb()
   .on('error', console.log)

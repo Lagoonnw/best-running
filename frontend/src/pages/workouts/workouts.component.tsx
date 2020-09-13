@@ -8,14 +8,19 @@ import { Workout }                            from "../../models/Workout";
 import { Filter }                             from "../../components/filter/filter";
 import { WorkoutList }                        from "../../components/workout-list/workout-list";
 import { dateSort, distanceSort, typeFilter } from "../../helpers/helpers";
+import axios from 'axios';
 
 export class WorkoutsComponent extends PureComponent<TState, any> {
   constructor(props: TState) {
     super(props);
+    //@ts-ignore
+    const {getWorkouts} = props;
     this.state = {
       isOpen  : false,
       workouts: props.workouts
     }
+    // getWorkouts();
+    console.log('props', props );
   }
   
   onFilterChange = (filter: { type: string, value: string | null }): void => {
@@ -45,6 +50,20 @@ export class WorkoutsComponent extends PureComponent<TState, any> {
         workouts: dateSort([...props.workouts], value)
       } ))
     }
+  }
+  
+  componentDidMount() {
+    //@ts-ignore
+    this.props.getWorkouts();
+  }
+  
+  componentDidUpdate(prevProps: Readonly<TState>, prevState: Readonly<any>, snapshot?: any) {
+    if (prevProps !== this.props) {
+      this.setState((_: any, props: { workouts: Workout[]; }) => ({
+        workouts: [...props.workouts]
+      }))
+    }
+    
   }
   
   

@@ -7,7 +7,7 @@ export const setProps = (props: { [x: string]: any; }, ctx: { [x: string]: any; 
 }
 
 export const typeFilter = (workouts: Workout[], type: string): Workout[] =>
-  workouts.filter((w: Workout) => w.type === type);
+  workouts.filter((w: Workout) => w.workout_type === type);
 
 export const distanceSort = (workouts: Workout[], type: string): Workout[] => (
   ( type === 'shortest' ) ?

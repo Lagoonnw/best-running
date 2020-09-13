@@ -7,8 +7,6 @@ const {host, port, db, apiUrl} = require('./configuration');
 const startServer = () => {
   app.listen(port, () => {
     console.log(`Started auth on port ${port}`);
-    console.log(`Started auth on host ${host}`);
-    console.log(`Our auth database: ${db}`);
   });
 };
 app.get('/test', (req, res) => {
