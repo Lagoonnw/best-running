@@ -11,3 +11,4 @@ export enum WorkoutActions {
 export const getWorkouts = createAction(WorkoutActions.get);
 export const setWorkouts = createAction(WorkoutActions.set, (payload: Workout[]) => payload);
 export const deleteWorkout = createAction(WorkoutActions.delete, (payload: Workout) => payload);
+export const addWorkout = createAction(WorkoutActions.post, (payload: Workout) => payload);

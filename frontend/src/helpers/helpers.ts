@@ -20,3 +20,10 @@ export const dateSort = (workouts: Workout[], type: string): Workout[] => (
   workouts.sort((a, b) => a.date.getTime() - b.date.getTime()) :
   workouts.sort((a, b) => b.date.getTime() - a.date.getTime())
 )
+
+export default {
+  setProps,
+  typeFilter,
+  distanceSort,
+  dateSort
+}

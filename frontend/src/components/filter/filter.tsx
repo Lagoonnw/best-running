@@ -3,7 +3,8 @@ import { Dropdown, DropdownItem, DropdownMenu, DropdownToggle } from "reactstrap
 import { workoutTypes, sortDateTypes, sortDistanceTypes }       from "../../constants/constants";
 
 interface Props {
-  onChange({type, value}: { [k: string]: string | null }): void
+  onChange({type, value}: { [k: string]: string | null }): void,
+  children: any
 }
 
 interface Filter {
@@ -65,7 +66,7 @@ export const Filter = (props: Props) => {
         </th>
         <th>{renderTypeFilter('distance')}</th>
         <th>{renderTypeFilter('date')}</th>
-        <th/>
+        <th>{props.children}</th>
       </tr>
     </Fragment>
   )

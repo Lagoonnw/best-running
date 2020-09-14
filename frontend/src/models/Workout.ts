@@ -32,7 +32,7 @@ export class Workout implements WorkoutModel {
   }
   
   public getDistance(): string {
-    return ( this.distance > 0 ) ? `${this.distance / 1000} km` : `0 km`;
+    return ( this.distance > 0 ) ? `${(this.distance / 1000).toFixed(2)} km` : `0 km`;
   }
   
   public getFormattedDate(): string {

@@ -1,111 +1,70 @@
-import React, { PureComponent }                     from 'react';
-import { Container, Row, Form, Input, Button, Col, FormGroup, Label } from 'reactstrap';
-// import {
-//   Container,
-//   FormGroup,
-//   Label,
-//   Input,
-//   FormText,
-//   Button
-// } from "reactstrap";
-// import { Formik, Field, Form, FormikHelpers } from 'formik';
-import { useFormik }                                from 'formik';
-import * as Yup                                     from 'yup';
-import axios from 'axios';
+import React         from 'react';
+/** @jsx jsx */
+import { css, jsx } from '@emotion/core';
+import {
+  Container,
+  Row,
+  Form,
+  Input,
+  Col,
+  FormGroup,
+  Label,
+  Breadcrumb,
+  BreadcrumbItem,
+  Button
+}                    from 'reactstrap';
+import { useFormik } from 'formik';
+import * as Yup      from 'yup';
+import { PageTitle } from "../../components/page-title/page-title";
 
-interface Values {
-  workout_type: string;
-  distance: number;
-  date: string;
-}
-
-const postWotkout = {
-
-}
-
-// const validate = (values: Values) => {
-//   const errors = {} as Values;
-//
-//   if ( !values.firstName ) {
-//     errors.firstName = 'Required';
-//   }
-//   else if ( values.firstName.length > 15 ) {
-//     errors.firstName = 'Must be 15 characters or less';
-//   }
-//
-//   if ( !values.lastName ) {
-//     errors.lastName = 'Required';
-//   }
-//   else if ( values.lastName.length > 20 ) {
-//     errors.lastName = 'Must be 20 characters or less';
-//   }
-//
-//   if ( !values.email ) {
-//     errors.email = 'Required';
-//   }
-//   else if ( !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.email) ) {
-//     errors.email = 'Invalid email address';
-//   }
-//
-//   return errors;
-// };
-
-const validateDistance = (value: any) => {
-  console.log('validate',value)
-  return true;
-};
-
-const postWorkout = (workout: Values) => {
-  const [year, month, day] = workout.date.split('-');
-  // console.log('model', responseType: "json");
-  axios.create({
-    baseURL: 'http://app-test.com/api',
-    responseType: "json"
-  }).post(
-    '/workouts', {...workout, date: new Date(+year, +month, +day)}
-  ).then(r => {
-    console.log('axios workout', r.data);
-  }).catch(err => {
-    console.log('error', err);
-  });
-  // axios.post('/workouts', {...workout, date: new Date(+year, +month, +day)})
-}
+const initialDate = new Date()
+  .toLocaleString('en-Gb', {year: 'numeric', month: 'numeric', day: 'numeric'})
+  .split('/')
+  .reverse()
+  .join('-');
 
 export const AddWorkoutComponent = (props: any) => {
+  const {addWorkout} = props;
+  
   const formik = useFormik({
     initialValues   : {
       workout_type: 'Skiing',
-      distance : 1,
-      date    : new Date()
-        .toLocaleString('en-Gb', { year: 'numeric', month: 'numeric', day: 'numeric' })
-        .split('/')
-        .reverse()
-        .join('-'),
+      distance    : 1,
+      date        : initialDate,
     },
     validationSchema: Yup.object({
       workout_type: Yup.string()
         .required('Required'),
-      distance : Yup.string()
+      distance    : Yup.string()
         .min(1, 'Must be positive')
         .required('Required'),
-      date    : Yup.string()
+      date        : Yup.string()
         .required('Required'),
     }),
     onSubmit        : values => {
-      console.log('submit', );
-      console.log(values);
-      postWorkout(values);
+      const [year, month, day] = values.date.split('-');
+      addWorkout({...values, date: new Date(+year, +month, +day)});
     },
   });
+  
   return (
     <Container>
+      <PageTitle>Add your workout</PageTitle>
+      <Breadcrumb>
+        <BreadcrumbItem><a href="/">Main</a></BreadcrumbItem>
+        <BreadcrumbItem active>Add</BreadcrumbItem>
+      </Breadcrumb>
       <Form onSubmit={formik.handleSubmit}>
         <Row>
-          <Col sm={{size: 3, order: 1}}/>
           <Col sm={{size: 6, order: 2}}>
             <FormGroup>
               <Label htmlFor="workout_type" for="workout_type">Select a workout type</Label>
-              <Input type="select" name="workout_type" id="workout_type" {...formik.getFieldProps('workout_type')}>
+              <Input
+                type="select"
+                name="workout_type"
+                id="workout_type"
+                {...formik.getFieldProps('workout_type')}
+              >
                 <option>Skiing</option>
                 <option>Walk</option>
                 <option>Running</option>
@@ -116,7 +75,6 @@ export const AddWorkoutComponent = (props: any) => {
               ) : null}
             </FormGroup>
             
-            
             <Label htmlFor="distance" for="distance">Distance (m)</Label>
             <Input
               id="distance"
@@ -124,12 +82,10 @@ export const AddWorkoutComponent = (props: any) => {
               min="1"
               {...formik.getFieldProps('distance')}
             />
+            
             {formik.touched.distance && formik.errors.distance ? (
               <div>{formik.errors.distance}</div>
             ) : null}
-  
-            
-         
             
             <Label htmlFor="date" for="date">Date</Label>
             <Input
@@ -137,14 +93,17 @@ export const AddWorkoutComponent = (props: any) => {
               type="date"
               {...formik.getFieldProps('date')}
             />
+            
             {formik.touched.date && formik.errors.date ? (
               <div>{formik.errors.date}</div>
             ) : null}
-  
-            <button type="submit">Submit</button>
-          
+            
+            <Button
+              type="submit"
+              color="success"
+              css={css`display: flex;margin-top: 10px; margin-left: auto`}
+            >Submit</Button>
           </Col>
-          <Col sm={{size: 3, order: 3}}/>
         </Row>
       
       </Form>

@@ -1,8 +1,9 @@
 import React, { PureComponent, ReactNode } from 'react';
 import {
+  Button,
   Container,
   Table,
-}                                    from 'reactstrap';
+} from 'reactstrap';
 import { DispatchProps, StateProps } from "./workouts.container";
 import { Workout }                   from "../../models/Workout";
 import { Filter }                    from "../../components/filter/filter";
@@ -13,6 +14,8 @@ import {
   typeFilter
 }                                    from "../../helpers/helpers";
 import { Chart }                     from "../../components/chart/chart";
+import { Link }                      from "react-router-dom";
+import { PageTitle }                 from "../../components/page-title/page-title";
 
 export interface ComponentState {
   isOpen: boolean,
@@ -43,10 +46,15 @@ export class WorkoutsComponent extends PureComponent<StateProps & DispatchProps,
   public render(): ReactNode {
     return (
       <Container>
+        <PageTitle>Best Runner</PageTitle>
         {this.state.workouts.length > 0 && <Chart workouts={this.props.workouts}/>}
         <Table>
           <thead>
-            <Filter onChange={this.onFilterChange}/>
+          <Filter onChange={this.onFilterChange}>
+            <Link to='/add'>
+              <Button color='success'>Add new</Button>
+            </Link>
+          </Filter>
           </thead>
           <tbody>
             <WorkoutList workouts={this.state.workouts} deleteWorkout={this.onDeleteClick}/>

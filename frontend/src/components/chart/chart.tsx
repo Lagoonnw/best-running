@@ -19,16 +19,16 @@ export const Chart = (props: {workouts: Workout[]}) => {
           ['Date and type', 'Km' ],...workoutsToDisplay
         ]}
         width="100%"
-        height="400px"
+        height="500px"
         options={{
           title: 'The workout distance chart',
           chartArea: { width: '80%' },
           hAxis: {
-            title: 'Date',
             minValue: 0,
           },
           vAxis: {
             title: 'Distance in km',
+            minValue: 0
           },
         }}
         legendToggle

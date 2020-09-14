@@ -5,18 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1dca5eb2-6136-485c-93de-ebbb56cbec21" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/frontend/src/components/chart/chart.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/components/page-title/page-title.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/helpers/helpers.test.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/pages/add-workout/add-workout.container.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/src/routes/workout.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/routes/workout.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/package-lock.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/__mock__/data.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/__mock__/data.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/chart/chart.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/chart/chart.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/components/filter/filter.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/filter/filter.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/workout-list/workout-list.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/workout-list/workout-list.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/workout-row/workout-row.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/workout-row/workout-row.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/helpers/helpers.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/helpers/helpers.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/models/Workout.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/models/Workout.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/pages/add-workout/add-workout.component.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/add-workout/add-workout.component.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/pages/workouts/workouts.component.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/workouts/workouts.component.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/pages/workouts/workouts.container.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/workouts/workouts.container.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/store/actions/workouts.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/store/actions/workouts.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/store/reducers/workouts.reducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/store/reducers/workouts.reducer.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/store/sagas/workouts.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/store/sagas/workouts.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -28,8 +31,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JavaScript File" />
-        <option value="TypeScript File" />
         <option value="TypeScript JSX File" />
+        <option value="TypeScript File" />
       </list>
     </option>
   </component>
@@ -58,6 +61,7 @@
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs.jest.jest_package" value="$PROJECT_DIR$/frontend/node_modules/react-scripts" />
     <property name="nodejs_interpreter_path" value="node" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -80,6 +84,56 @@
       <recent name="E:\workspace\app\frontend" />
       <recent name="E:\workspace\app\auth" />
     </key>
+  </component>
+  <component name="RunManager" selected="Jest.Helpers test.sortDistance test">
+    <configuration name="Helpers test" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/frontend/node_modules/react-scripts" />
+      <working-dir value="$PROJECT_DIR$/frontend" />
+      <envs />
+      <scope-kind value="SUITE" />
+      <test-file value="$PROJECT_DIR$/frontend/src/helpers/helpers.test.ts" />
+      <test-names>
+        <test-name value="Helpers test" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="Helpers test.sortDate test" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/frontend/node_modules/react-scripts" />
+      <working-dir value="$PROJECT_DIR$/frontend" />
+      <envs />
+      <scope-kind value="TEST" />
+      <test-file value="$PROJECT_DIR$/frontend/src/helpers/helpers.test.ts" />
+      <test-names>
+        <test-name value="Helpers test" />
+        <test-name value="sortDate test" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="Helpers test.sortDistance test" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/frontend/node_modules/react-scripts" />
+      <working-dir value="$PROJECT_DIR$/frontend" />
+      <envs />
+      <scope-kind value="TEST" />
+      <test-file value="$PROJECT_DIR$/frontend/src/helpers/helpers.test.ts" />
+      <test-names>
+        <test-name value="Helpers test" />
+        <test-name value="sortDistance test" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Jest.Helpers test.sortDistance test" />
+        <item itemvalue="Jest.Helpers test.sortDate test" />
+        <item itemvalue="Jest.Helpers test" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
@@ -104,7 +158,7 @@
       <workItem from="1599633744305" duration="4579000" />
       <workItem from="1599642810865" duration="15966000" />
       <workItem from="1599705427229" duration="31706000" />
-      <workItem from="1599830389896" duration="38755000" />
+      <workItem from="1599830389896" duration="48286000" />
     </task>
     <task id="LOCAL-00001" summary="- nginx">
       <created>1599204823761</created>
@@ -183,7 +237,14 @@
       <option name="project" value="LOCAL" />
       <updated>1599990641110</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary=":frontend:&#10;- google chart&#10;&#10;:api:&#10;- delete">
+      <created>1600074153533</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1600074153533</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -202,7 +263,8 @@
     <MESSAGE value=":frontend:&#10;- filter component" />
     <MESSAGE value=":frontend:&#10;- form" />
     <MESSAGE value=":frontend:&#10;- saga, api&#10;&#10;:api:&#10;- post, get" />
-    <option name="LAST_COMMIT_MESSAGE" value=":frontend:&#10;- saga, api&#10;&#10;:api:&#10;- post, get" />
+    <MESSAGE value=":frontend:&#10;- google chart&#10;&#10;:api:&#10;- delete" />
+    <option name="LAST_COMMIT_MESSAGE" value=":frontend:&#10;- google chart&#10;&#10;:api:&#10;- delete" />
   </component>
   <component name="WindowStateProjectService">
     <state x="644" y="353" key="#TSLint" timestamp="1599709613114">
@@ -213,24 +275,40 @@
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
     <state x="876" y="305" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1160@0.0.1920.1160" timestamp="1599712694741" />
-    <state x="0" y="0" key="CommitChangelistDialog2" timestamp="1599990640415">
+    <state x="0" y="0" key="CommitChangelistDialog2" timestamp="1600074152849">
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
-    <state x="0" y="0" key="CommitChangelistDialog2/0.0.1920.1160@0.0.1920.1160" timestamp="1599990640415" />
+    <state x="0" y="0" key="CommitChangelistDialog2/0.0.1920.1160@0.0.1920.1160" timestamp="1600074152849" />
     <state x="396" y="434" key="FileChooserDialogImpl" timestamp="1599974417594">
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
     <state x="0" y="549" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1599284592410" />
     <state x="396" y="434" key="FileChooserDialogImpl/0.0.1920.1160@0.0.1920.1160" timestamp="1599974417594" />
+    <state width="1877" height="324" key="GridCell.Tab.0.bottom" timestamp="1600088535925">
+      <screen x="0" y="0" width="1920" height="1160" />
+    </state>
+    <state width="1877" height="324" key="GridCell.Tab.0.bottom/0.0.1920.1160@0.0.1920.1160" timestamp="1600088535925" />
+    <state width="1877" height="324" key="GridCell.Tab.0.center" timestamp="1600088535925">
+      <screen x="0" y="0" width="1920" height="1160" />
+    </state>
+    <state width="1877" height="324" key="GridCell.Tab.0.center/0.0.1920.1160@0.0.1920.1160" timestamp="1600088535925" />
+    <state width="1877" height="324" key="GridCell.Tab.0.left" timestamp="1600088535924">
+      <screen x="0" y="0" width="1920" height="1160" />
+    </state>
+    <state width="1877" height="324" key="GridCell.Tab.0.left/0.0.1920.1160@0.0.1920.1160" timestamp="1600088535924" />
+    <state width="1877" height="324" key="GridCell.Tab.0.right" timestamp="1600088535925">
+      <screen x="0" y="0" width="1920" height="1160" />
+    </state>
+    <state width="1877" height="324" key="GridCell.Tab.0.right/0.0.1920.1160@0.0.1920.1160" timestamp="1600088535925" />
     <state x="733" y="232" key="SettingsEditor" timestamp="1599709762954">
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
     <state x="733" y="208" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1599284551374" />
     <state x="733" y="232" key="SettingsEditor/0.0.1920.1160@0.0.1920.1160" timestamp="1599709762954" />
-    <state x="475" y="516" key="Vcs.Push.Dialog.v2" timestamp="1599990648120">
+    <state x="475" y="516" key="Vcs.Push.Dialog.v2" timestamp="1600074157496">
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
-    <state x="475" y="516" key="Vcs.Push.Dialog.v2/0.0.1920.1160@0.0.1920.1160" timestamp="1599990648120" />
+    <state x="475" y="516" key="Vcs.Push.Dialog.v2/0.0.1920.1160@0.0.1920.1160" timestamp="1600074157496" />
     <state x="0" y="594" width="585" height="566" key="find.popup" timestamp="1599978670930">
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
