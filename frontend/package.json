@@ -53,6 +53,11 @@
   "eslintConfig": {
     "extends": "react-app"
   },
+  "jest": {
+    "setupFiles": [
+      "<rootDir>/enzyme.config.ts"
+    ]
+  },
   "browserslist": {
     "production": [
       ">0.2%",

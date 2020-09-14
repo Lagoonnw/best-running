@@ -5,22 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1dca5eb2-6136-485c-93de-ebbb56cbec21" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/frontend/src/components/page-title/page-title.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/helpers/helpers.test.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/pages/add-workout/add-workout.container.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/package-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/components/page-title/page-title.test.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/enzyme.config.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/package-lock.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/App.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/__mock__/data.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/__mock__/data.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/chart/chart.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/chart/chart.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/filter/filter.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/filter/filter.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/helpers/helpers.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/helpers/helpers.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/models/Workout.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/models/Workout.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/pages/add-workout/add-workout.component.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/add-workout/add-workout.component.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/pages/workouts/workouts.component.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/workouts/workouts.component.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/store/actions/workouts.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/store/actions/workouts.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/store/sagas/workouts.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/store/sagas/workouts.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/helpers/helpers.test.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/helpers/helpers.test.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,7 +47,7 @@
     <property name="javascript.nodejs.core.library.configured.version" value="12.18.3" />
     <property name="javascript.nodejs.core.library.typings.version" value="12.12.55" />
     <property name="js.linters.configure.manually.selectedtslint" value="true" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/07+Создание+задачи" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../#lagoonnw-htmlacademy/234149-what-to-watch-1" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
@@ -85,7 +75,7 @@
       <recent name="E:\workspace\app\auth" />
     </key>
   </component>
-  <component name="RunManager" selected="Jest.Helpers test.sortDistance test">
+  <component name="RunManager" selected="Jest.Should render title">
     <configuration name="Helpers test" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
       <node-options value="" />
@@ -96,6 +86,20 @@
       <test-file value="$PROJECT_DIR$/frontend/src/helpers/helpers.test.ts" />
       <test-names>
         <test-name value="Helpers test" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="Helpers test.setProps Test" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/frontend/node_modules/react-scripts" />
+      <working-dir value="$PROJECT_DIR$/frontend" />
+      <envs />
+      <scope-kind value="TEST" />
+      <test-file value="$PROJECT_DIR$/frontend/src/helpers/helpers.test.ts" />
+      <test-names>
+        <test-name value="Helpers test" />
+        <test-name value="setProps Test" />
       </test-names>
       <method v="2" />
     </configuration>
@@ -127,11 +131,26 @@
       </test-names>
       <method v="2" />
     </configuration>
+    <configuration name="Should render title" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/frontend/node_modules/react-scripts" />
+      <working-dir value="$PROJECT_DIR$/frontend" />
+      <envs />
+      <scope-kind value="TEST" />
+      <test-file value="$PROJECT_DIR$/frontend/src/components/page-title/page-title.test.tsx" />
+      <test-names>
+        <test-name value="Should render title" />
+      </test-names>
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Jest.Should render title" />
+        <item itemvalue="Jest.Helpers test" />
+        <item itemvalue="Jest.Helpers test.setProps Test" />
         <item itemvalue="Jest.Helpers test.sortDistance test" />
         <item itemvalue="Jest.Helpers test.sortDate test" />
-        <item itemvalue="Jest.Helpers test" />
       </list>
     </recent_temporary>
   </component>
@@ -158,7 +177,7 @@
       <workItem from="1599633744305" duration="4579000" />
       <workItem from="1599642810865" duration="15966000" />
       <workItem from="1599705427229" duration="31706000" />
-      <workItem from="1599830389896" duration="48286000" />
+      <workItem from="1599830389896" duration="51014000" />
     </task>
     <task id="LOCAL-00001" summary="- nginx">
       <created>1599204823761</created>
@@ -244,7 +263,14 @@
       <option name="project" value="LOCAL" />
       <updated>1600074153533</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary=":frontend:&#10;- test&#10;- refactoring&#10;- styled css">
+      <created>1600088768430</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1600088768430</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -264,7 +290,8 @@
     <MESSAGE value=":frontend:&#10;- form" />
     <MESSAGE value=":frontend:&#10;- saga, api&#10;&#10;:api:&#10;- post, get" />
     <MESSAGE value=":frontend:&#10;- google chart&#10;&#10;:api:&#10;- delete" />
-    <option name="LAST_COMMIT_MESSAGE" value=":frontend:&#10;- google chart&#10;&#10;:api:&#10;- delete" />
+    <MESSAGE value=":frontend:&#10;- test&#10;- refactoring&#10;- styled css" />
+    <option name="LAST_COMMIT_MESSAGE" value=":frontend:&#10;- test&#10;- refactoring&#10;- styled css" />
   </component>
   <component name="WindowStateProjectService">
     <state x="644" y="353" key="#TSLint" timestamp="1599709613114">
@@ -275,40 +302,44 @@
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
     <state x="876" y="305" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1160@0.0.1920.1160" timestamp="1599712694741" />
-    <state x="0" y="0" key="CommitChangelistDialog2" timestamp="1600074152849">
+    <state x="0" y="0" key="CommitChangelistDialog2" timestamp="1600088767769">
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
-    <state x="0" y="0" key="CommitChangelistDialog2/0.0.1920.1160@0.0.1920.1160" timestamp="1600074152849" />
-    <state x="396" y="434" key="FileChooserDialogImpl" timestamp="1599974417594">
+    <state x="0" y="0" key="CommitChangelistDialog2/0.0.1920.1160@0.0.1920.1160" timestamp="1600088767769" />
+    <state x="396" y="434" key="FileChooserDialogImpl" timestamp="1600091706584">
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
     <state x="0" y="549" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1599284592410" />
-    <state x="396" y="434" key="FileChooserDialogImpl/0.0.1920.1160@0.0.1920.1160" timestamp="1599974417594" />
-    <state width="1877" height="324" key="GridCell.Tab.0.bottom" timestamp="1600088535925">
+    <state x="396" y="434" key="FileChooserDialogImpl/0.0.1920.1160@0.0.1920.1160" timestamp="1600091706584" />
+    <state width="1877" height="324" key="GridCell.Tab.0.bottom" timestamp="1600091557501">
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
-    <state width="1877" height="324" key="GridCell.Tab.0.bottom/0.0.1920.1160@0.0.1920.1160" timestamp="1600088535925" />
-    <state width="1877" height="324" key="GridCell.Tab.0.center" timestamp="1600088535925">
+    <state width="1877" height="324" key="GridCell.Tab.0.bottom/0.0.1920.1160@0.0.1920.1160" timestamp="1600091557501" />
+    <state width="1877" height="324" key="GridCell.Tab.0.center" timestamp="1600091557501">
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
-    <state width="1877" height="324" key="GridCell.Tab.0.center/0.0.1920.1160@0.0.1920.1160" timestamp="1600088535925" />
-    <state width="1877" height="324" key="GridCell.Tab.0.left" timestamp="1600088535924">
+    <state width="1877" height="324" key="GridCell.Tab.0.center/0.0.1920.1160@0.0.1920.1160" timestamp="1600091557501" />
+    <state width="1877" height="324" key="GridCell.Tab.0.left" timestamp="1600091557501">
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
-    <state width="1877" height="324" key="GridCell.Tab.0.left/0.0.1920.1160@0.0.1920.1160" timestamp="1600088535924" />
-    <state width="1877" height="324" key="GridCell.Tab.0.right" timestamp="1600088535925">
+    <state width="1877" height="324" key="GridCell.Tab.0.left/0.0.1920.1160@0.0.1920.1160" timestamp="1600091557501" />
+    <state width="1877" height="324" key="GridCell.Tab.0.right" timestamp="1600091557501">
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
-    <state width="1877" height="324" key="GridCell.Tab.0.right/0.0.1920.1160@0.0.1920.1160" timestamp="1600088535925" />
+    <state width="1877" height="324" key="GridCell.Tab.0.right/0.0.1920.1160@0.0.1920.1160" timestamp="1600091557501" />
     <state x="733" y="232" key="SettingsEditor" timestamp="1599709762954">
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
     <state x="733" y="208" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1599284551374" />
     <state x="733" y="232" key="SettingsEditor/0.0.1920.1160@0.0.1920.1160" timestamp="1599709762954" />
-    <state x="475" y="516" key="Vcs.Push.Dialog.v2" timestamp="1600074157496">
+    <state x="475" y="516" key="Vcs.Push.Dialog.v2" timestamp="1600088771055">
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
-    <state x="475" y="516" key="Vcs.Push.Dialog.v2/0.0.1920.1160@0.0.1920.1160" timestamp="1600074157496" />
+    <state x="475" y="516" key="Vcs.Push.Dialog.v2/0.0.1920.1160@0.0.1920.1160" timestamp="1600088771055" />
+    <state x="427" y="164" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1600091490773">
+      <screen x="0" y="0" width="1920" height="1160" />
+    </state>
+    <state x="427" y="164" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1920.1160@0.0.1920.1160" timestamp="1600091490773" />
     <state x="0" y="594" width="585" height="566" key="find.popup" timestamp="1599978670930">
       <screen x="0" y="0" width="1920" height="1160" />
     </state>

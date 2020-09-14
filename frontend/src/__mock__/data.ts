@@ -1,4 +1,5 @@
-import { Workout } from "../models/Workout";
+import { Workout }  from "../models/Workout";
+import { setProps } from "../helpers/helpers";
 
 export const User = {
   id: '123456',
@@ -35,4 +36,4 @@ export const User = {
       date: new Date(2020, 4,1)
     })
   ]
-}
+};

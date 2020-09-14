@@ -1,5 +1,5 @@
 import Helper from './helpers';
-import {User} from '../__mock__/data';
+import {User}               from '../__mock__/data';
 
 describe('Helpers test', () => {
   const [first, second] = User.workouts;
