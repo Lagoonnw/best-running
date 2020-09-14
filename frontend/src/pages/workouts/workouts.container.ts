@@ -1,24 +1,31 @@
 import { connect }             from "react-redux";
-import { selectWorkouts }      from "../../store/reducers/workouts.reducer";
-import { WorkoutsComponent }   from "./workouts.component"
-import { RouteComponentProps } from 'react-router';
+import { selectWorkouts }                    from "../../store/reducers/workouts.reducer";
+import { ComponentState, WorkoutsComponent } from "./workouts.component"
+import { RouteComponentProps }               from 'react-router';
 import { AppState }                     from "../../store/reducers/root.reducer";
 import { bindActionCreators, Dispatch } from 'redux';
-import {getWorkouts}                    from "../../store/actions/workouts";
+import { deleteWorkout, getWorkouts }   from "../../store/actions/workouts";
 
-export interface State {
+export interface StateProps {
   workouts: any[]
 }
 
-export type TState = State & RouteComponentProps;
+export interface DispatchProps {
+  getWorkouts: typeof getWorkouts,
+  deleteWorkout: typeof deleteWorkout
+}
 
-const mapStateToProps = (state: AppState, ownProps: any): TState => ( {
+export type TStateProps = StateProps & RouteComponentProps;
+
+const mapStateToProps = (state: AppState, ownProps: any): TStateProps => ( {
   ...ownProps,
   workouts: selectWorkouts(state)
 } );
 
-const mapDispatchToProps = (dispatch: Dispatch) => bindActionCreators({
-  getWorkouts
+const mapDispatchToProps = (dispatch: Dispatch): DispatchProps => bindActionCreators({
+  getWorkouts,
+  deleteWorkout
 }, dispatch);
 
-export default connect(mapStateToProps, mapDispatchToProps)(WorkoutsComponent);
+//@ts-ignore
+export default connect<TStateProps, DispatchProps, {}>(mapStateToProps, mapDispatchToProps)(WorkoutsComponent);

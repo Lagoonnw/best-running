@@ -1,4 +1,5 @@
 import {createAction} from 'redux-actions';
+import { Workout }    from "../../models/Workout";
 
 export enum WorkoutActions {
   get = '[Workouts] get all workouts',
@@ -8,4 +9,5 @@ export enum WorkoutActions {
 }
 
 export const getWorkouts = createAction(WorkoutActions.get);
-export const setWorkouts = createAction(WorkoutActions.set, (payload: any) => payload);
+export const setWorkouts = createAction(WorkoutActions.set, (payload: Workout[]) => payload);
+export const deleteWorkout = createAction(WorkoutActions.delete, (payload: Workout) => payload);

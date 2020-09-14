@@ -5,30 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1dca5eb2-6136-485c-93de-ebbb56cbec21" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/api/src/models/Workout.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/src/routes/workout.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/services/api.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/store/actions/workouts.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/store/sagas/root.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/store/sagas/workouts.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/components/chart/chart.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/api/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/src/helpers/db.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/helpers/db.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auth/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/auth/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/src/routes/workout.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/routes/workout.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/filter/filter.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/filter/filter.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/workout-list/workout-list.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/workout-list/workout-list.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/components/workout-row/workout-row.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/workout-row/workout-row.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/constants/constants.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/constants/constants.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/helpers/helpers.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/helpers/helpers.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/models/Workout.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/models/Workout.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/pages/add-workout/add-workout.component.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/add-workout/add-workout.component.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/pages/workouts/workouts.component.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/workouts/workouts.component.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/pages/workouts/workouts.container.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/workouts/workouts.container.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/store/actions/workouts.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/store/actions/workouts.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/store/reducers/workouts.reducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/store/reducers/workouts.reducer.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/store/store.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/store/store.config.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/store/sagas/workouts.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/store/sagas/workouts.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,9 +27,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="TypeScript JSX File" />
         <option value="JavaScript File" />
         <option value="TypeScript File" />
+        <option value="TypeScript JSX File" />
       </list>
     </option>
   </component>
@@ -115,7 +104,7 @@
       <workItem from="1599633744305" duration="4579000" />
       <workItem from="1599642810865" duration="15966000" />
       <workItem from="1599705427229" duration="31706000" />
-      <workItem from="1599830389896" duration="26827000" />
+      <workItem from="1599830389896" duration="38755000" />
     </task>
     <task id="LOCAL-00001" summary="- nginx">
       <created>1599204823761</created>
@@ -187,7 +176,14 @@
       <option name="project" value="LOCAL" />
       <updated>1599890964183</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary=":frontend:&#10;- saga, api&#10;&#10;:api:&#10;- post, get">
+      <created>1599990641110</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1599990641110</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -205,7 +201,8 @@
     <MESSAGE value=":frontend:&#10;- workout model" />
     <MESSAGE value=":frontend:&#10;- filter component" />
     <MESSAGE value=":frontend:&#10;- form" />
-    <option name="LAST_COMMIT_MESSAGE" value=":frontend:&#10;- form" />
+    <MESSAGE value=":frontend:&#10;- saga, api&#10;&#10;:api:&#10;- post, get" />
+    <option name="LAST_COMMIT_MESSAGE" value=":frontend:&#10;- saga, api&#10;&#10;:api:&#10;- post, get" />
   </component>
   <component name="WindowStateProjectService">
     <state x="644" y="353" key="#TSLint" timestamp="1599709613114">
@@ -216,10 +213,10 @@
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
     <state x="876" y="305" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1160@0.0.1920.1160" timestamp="1599712694741" />
-    <state x="0" y="0" key="CommitChangelistDialog2" timestamp="1599890963594">
+    <state x="0" y="0" key="CommitChangelistDialog2" timestamp="1599990640415">
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
-    <state x="0" y="0" key="CommitChangelistDialog2/0.0.1920.1160@0.0.1920.1160" timestamp="1599890963594" />
+    <state x="0" y="0" key="CommitChangelistDialog2/0.0.1920.1160@0.0.1920.1160" timestamp="1599990640415" />
     <state x="396" y="434" key="FileChooserDialogImpl" timestamp="1599974417594">
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
@@ -230,10 +227,10 @@
     </state>
     <state x="733" y="208" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1599284551374" />
     <state x="733" y="232" key="SettingsEditor/0.0.1920.1160@0.0.1920.1160" timestamp="1599709762954" />
-    <state x="475" y="516" key="Vcs.Push.Dialog.v2" timestamp="1599890969071">
+    <state x="475" y="516" key="Vcs.Push.Dialog.v2" timestamp="1599990648120">
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
-    <state x="475" y="516" key="Vcs.Push.Dialog.v2/0.0.1920.1160@0.0.1920.1160" timestamp="1599890969071" />
+    <state x="475" y="516" key="Vcs.Push.Dialog.v2/0.0.1920.1160@0.0.1920.1160" timestamp="1599990648120" />
     <state x="0" y="594" width="585" height="566" key="find.popup" timestamp="1599978670930">
       <screen x="0" y="0" width="1920" height="1160" />
     </state>

@@ -1,30 +1,65 @@
-import React, { PureComponent, ReactNode }    from 'react';
+import React, { PureComponent, ReactNode } from 'react';
 import {
   Container,
   Table,
-}                                             from 'reactstrap';
-import { TState }                             from "./workouts.container";
-import { Workout }                            from "../../models/Workout";
-import { Filter }                             from "../../components/filter/filter";
-import { WorkoutList }                        from "../../components/workout-list/workout-list";
-import { dateSort, distanceSort, typeFilter } from "../../helpers/helpers";
-import axios from 'axios';
+}                                    from 'reactstrap';
+import { DispatchProps, StateProps } from "./workouts.container";
+import { Workout }                   from "../../models/Workout";
+import { Filter }                    from "../../components/filter/filter";
+import { WorkoutList }               from "../../components/workout-list/workout-list";
+import {
+  dateSort,
+  distanceSort,
+  typeFilter
+}                                    from "../../helpers/helpers";
+import { Chart }                     from "../../components/chart/chart";
 
-export class WorkoutsComponent extends PureComponent<TState, any> {
-  constructor(props: TState) {
+export interface ComponentState {
+  isOpen: boolean,
+  workouts: Workout[]
+}
+
+export class WorkoutsComponent extends PureComponent<StateProps & DispatchProps, ComponentState> {
+  constructor(props: StateProps & DispatchProps) {
     super(props);
-    //@ts-ignore
-    const {getWorkouts} = props;
     this.state = {
       isOpen  : false,
       workouts: props.workouts
     }
-    // getWorkouts();
-    console.log('props', props );
   }
   
-  onFilterChange = (filter: { type: string, value: string | null }): void => {
+  componentDidMount() {
+    this.props.getWorkouts();
+  }
+  
+  componentDidUpdate(prevProps: Readonly<StateProps>, prevState: Readonly<any>, snapshot?: any): void {
+    if ( prevProps !== this.props ) {
+      this.setState((_: any, props: { workouts: Workout[]; }) => ( {
+        workouts: [...props.workouts]
+      } ))
+    }
+  }
+  
+  public render(): ReactNode {
+    return (
+      <Container>
+        {this.state.workouts.length > 0 && <Chart workouts={this.props.workouts}/>}
+        <Table>
+          <thead>
+            <Filter onChange={this.onFilterChange}/>
+          </thead>
+          <tbody>
+            <WorkoutList workouts={this.state.workouts} deleteWorkout={this.onDeleteClick}/>
+          </tbody>
+        </Table>
+      </Container>
+    );
+  }
+  
+  private onFilterChange = (filter: { type: string, value: string | null }): void => {
     const {type, value} = filter;
+    
+    // Сбрасываем фильтр
     if ( !value ) {
       this.setState((_: any, props: { workouts: Workout[]; }) => {
         return {
@@ -33,54 +68,29 @@ export class WorkoutsComponent extends PureComponent<TState, any> {
       })
     }
     
+    // Фильтруем по типу
     if ( value && type === 'type' ) {
       this.setState((_: any, props: { workouts: Workout[]; }) => ( {
         workouts: typeFilter([...props.workouts], value)
-      } ))
+      } ));
     }
     
+    // Сортируем по дистанции
     if ( value && type === 'distance' ) {
       this.setState((_: any, props: { workouts: Workout[]; }) => ( {
         workouts: distanceSort([...props.workouts], value)
       } ));
     }
     
+    // Сортируем по дате
     if ( value && type === 'date' ) {
       this.setState((_: any, props: { workouts: Workout[]; }) => ( {
         workouts: dateSort([...props.workouts], value)
-      } ))
+      } ));
     }
   }
   
-  componentDidMount() {
-    //@ts-ignore
-    this.props.getWorkouts();
-  }
-  
-  componentDidUpdate(prevProps: Readonly<TState>, prevState: Readonly<any>, snapshot?: any) {
-    if (prevProps !== this.props) {
-      this.setState((_: any, props: { workouts: Workout[]; }) => ({
-        workouts: [...props.workouts]
-      }))
-    }
-    
-  }
-  
-  
-  public render(): ReactNode {
-    //@ts-ignore
-    // @ts-ignore
-    return (
-      <Container>
-        <Table>
-          <thead>
-          <Filter onChange={this.onFilterChange}/>
-          </thead>
-          <tbody>
-          <WorkoutList workouts={this.state.workouts}/>
-          </tbody>
-        </Table>
-      </Container>
-    );
+  private onDeleteClick = (w: Workout): void => {
+    this.props.deleteWorkout(w);
   }
 }

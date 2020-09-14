@@ -1,9 +1,10 @@
 import React       from 'react';
 import { Workout } from "../../models/Workout";
-import {Button}    from "reactstrap";
+import { Button }  from "reactstrap";
 
-export const WorkoutRow = (props: { workout: Workout; index: number }) => {
-  const {workout, index} = props;
+export const WorkoutRow = (props: { workout: Workout; index: number; deleteWorkout: (w: Workout) => void }) => {
+  const {workout, index, deleteWorkout} = props;
+  const onDeleteClick = () => deleteWorkout(workout);
   
   return ( <tr>
     <th scope="row">
@@ -19,8 +20,7 @@ export const WorkoutRow = (props: { workout: Workout; index: number }) => {
       {workout.getFormattedDate()}
     </td>
     <th>
-      <Button tag="button" color="primary">Edit</Button>
-      <Button tag="button" color="danger" outline>Delete</Button>
+      <Button tag="button" color="danger" outline onClick={onDeleteClick}>Delete</Button>
     </th>
   </tr> )
 }

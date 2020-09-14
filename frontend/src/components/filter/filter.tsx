@@ -65,6 +65,7 @@ export const Filter = (props: Props) => {
         </th>
         <th>{renderTypeFilter('distance')}</th>
         <th>{renderTypeFilter('date')}</th>
+        <th/>
       </tr>
     </Fragment>
   )
