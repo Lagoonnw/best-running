@@ -71,7 +71,7 @@ export const AddWorkoutComponent = (props: any) => {
                 <option>Bike</option>
               </Input>
               {formik.touched.workout_type && formik.errors.workout_type ? (
-                <div>{formik.errors.workout_type}</div>
+                <div className='error'>{formik.errors.workout_type}</div>
               ) : null}
             </FormGroup>
             
@@ -84,7 +84,7 @@ export const AddWorkoutComponent = (props: any) => {
             />
             
             {formik.touched.distance && formik.errors.distance ? (
-              <div>{formik.errors.distance}</div>
+              <div className='error'>{formik.errors.distance}</div>
             ) : null}
             
             <Label htmlFor="date" for="date">Date</Label>
@@ -95,7 +95,7 @@ export const AddWorkoutComponent = (props: any) => {
             />
             
             {formik.touched.date && formik.errors.date ? (
-              <div>{formik.errors.date}</div>
+              <div className='error'>{formik.errors.date}</div>
             ) : null}
             
             <Button
@@ -105,7 +105,6 @@ export const AddWorkoutComponent = (props: any) => {
             >Submit</Button>
           </Col>
         </Row>
-      
       </Form>
     </Container>
   )

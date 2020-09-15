@@ -4,17 +4,14 @@ import './index.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import App                      from './App';
 import * as serviceWorker       from './serviceWorker'
-import { Provider }             from "react-redux";
+import { Provider }             from 'react-redux';
 import { createBrowserHistory } from 'history';
 import { ConnectedRouter }      from 'connected-react-router';
-import { initStore }            from "./store/store.config";
-// import { createAPI }            from "./services/api";
+import { initStore }            from './store/store.config';
 
 const init = (): void => {
   const history = createBrowserHistory();
   const store = initStore(history);
-  
-  // const api = createAPI();
   
   ReactDOM.render(
     <Provider store={store}>
@@ -23,18 +20,6 @@ const init = (): void => {
       </ConnectedRouter>
     </Provider>
     , document.getElementById('root'))
-  
-  // ReactDOM.render(
-  //   <Provider store={store}>
-  //     <Router>
-  //       <React.StrictMode>
-  //         {/*<App/>*/}
-  //         <Route path="/" component={App} />
-  //       </React.StrictMode>
-  //     </Router>
-  //   </Provider>,
-  //   document.getElementById('root')
-  // );
 };
 
 init();

@@ -1,6 +1,6 @@
 import { handleActions }  from 'redux-actions';
-import { AppState }       from "./root.reducer";
-import { WorkoutActions } from "../actions/workouts";
+import { AppState }       from './root.reducer';
+import { WorkoutActions } from '../actions/workouts';
 
 export type State = Array<{ [k: string]: any }>;
 

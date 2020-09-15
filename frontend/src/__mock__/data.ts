@@ -1,5 +1,4 @@
-import { Workout }  from "../models/Workout";
-import { setProps } from "../helpers/helpers";
+import { Workout }  from '../models/Workout';
 
 export const User = {
   id: '123456',

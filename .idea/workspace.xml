@@ -5,12 +5,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1dca5eb2-6136-485c-93de-ebbb56cbec21" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/frontend/package-lock.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/components/page-title/page-title.test.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/enzyme.config.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/components/chart/chart.test.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/components/filter/filter.test.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/components/workout-list/workout-list.test.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/components/workout-row/workout-row.test.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/pages/add-workout/add-workout-component.test.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/pages/workouts/workouts-component.test.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/App.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/App.test.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/__mock__/data.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/__mock__/data.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/helpers/helpers.test.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/helpers/helpers.test.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/page-title/page-title.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/page-title/page-title.test.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/enzyme.config.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/pages/add-workout/add-workout.component.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/add-workout/add-workout.component.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/store/reducers/root.reducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/store/reducers/root.reducer.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/store/reducers/settings.reducer.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/store/reducers/workouts.reducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/store/reducers/workouts.reducer.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/store/sagas/workouts.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/store/sagas/workouts.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/store/store.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/store/store.config.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/tslint.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/tslint.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,8 +35,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JavaScript File" />
-        <option value="TypeScript JSX File" />
         <option value="TypeScript File" />
+        <option value="TypeScript JSX File" />
       </list>
     </option>
   </component>
@@ -57,7 +71,7 @@
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="settings.editor.selected.configurable" value="settings.javascript.linters.tslint" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.TypeScript" />
     <property name="ts.external.directory.path" value="E:\workspace\app\frontend\node_modules\typescript\lib" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -75,82 +89,83 @@
       <recent name="E:\workspace\app\auth" />
     </key>
   </component>
-  <component name="RunManager" selected="Jest.Should render title">
-    <configuration name="Helpers test" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Jest.Workouts component test.test spy">
+    <configuration name="Add workout component test" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
       <node-options value="" />
       <jest-package value="$PROJECT_DIR$/frontend/node_modules/react-scripts" />
       <working-dir value="$PROJECT_DIR$/frontend" />
       <envs />
       <scope-kind value="SUITE" />
-      <test-file value="$PROJECT_DIR$/frontend/src/helpers/helpers.test.ts" />
+      <test-file value="$PROJECT_DIR$/frontend/src/pages/add-workout/add-workout-component.test.tsx" />
       <test-names>
-        <test-name value="Helpers test" />
+        <test-name value="Add workout component test" />
       </test-names>
       <method v="2" />
     </configuration>
-    <configuration name="Helpers test.setProps Test" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+    <configuration name="Add workout component test.Should render component" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
       <node-options value="" />
       <jest-package value="$PROJECT_DIR$/frontend/node_modules/react-scripts" />
       <working-dir value="$PROJECT_DIR$/frontend" />
       <envs />
       <scope-kind value="TEST" />
-      <test-file value="$PROJECT_DIR$/frontend/src/helpers/helpers.test.ts" />
+      <test-file value="$PROJECT_DIR$/frontend/src/pages/add-workout/add-workout-component.test.tsx" />
       <test-names>
-        <test-name value="Helpers test" />
-        <test-name value="setProps Test" />
+        <test-name value="Add workout component test" />
+        <test-name value="Should render component" />
       </test-names>
       <method v="2" />
     </configuration>
-    <configuration name="Helpers test.sortDate test" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+    <configuration name="Add workout component test.Should render div.error" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
       <node-options value="" />
       <jest-package value="$PROJECT_DIR$/frontend/node_modules/react-scripts" />
       <working-dir value="$PROJECT_DIR$/frontend" />
       <envs />
       <scope-kind value="TEST" />
-      <test-file value="$PROJECT_DIR$/frontend/src/helpers/helpers.test.ts" />
+      <test-file value="$PROJECT_DIR$/frontend/src/pages/add-workout/add-workout-component.test.tsx" />
       <test-names>
-        <test-name value="Helpers test" />
-        <test-name value="sortDate test" />
+        <test-name value="Add workout component test" />
+        <test-name value="Should render div.error" />
       </test-names>
       <method v="2" />
     </configuration>
-    <configuration name="Helpers test.sortDistance test" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+    <configuration name="Workouts component test.Should render with default state" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
       <node-options value="" />
       <jest-package value="$PROJECT_DIR$/frontend/node_modules/react-scripts" />
       <working-dir value="$PROJECT_DIR$/frontend" />
       <envs />
       <scope-kind value="TEST" />
-      <test-file value="$PROJECT_DIR$/frontend/src/helpers/helpers.test.ts" />
+      <test-file value="$PROJECT_DIR$/frontend/src/pages/workouts/workouts-component.test.tsx" />
       <test-names>
-        <test-name value="Helpers test" />
-        <test-name value="sortDistance test" />
+        <test-name value="Workouts component test" />
+        <test-name value="Should render with default state" />
       </test-names>
       <method v="2" />
     </configuration>
-    <configuration name="Should render title" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+    <configuration name="Workouts component test.test spy" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
       <node-options value="" />
       <jest-package value="$PROJECT_DIR$/frontend/node_modules/react-scripts" />
       <working-dir value="$PROJECT_DIR$/frontend" />
       <envs />
       <scope-kind value="TEST" />
-      <test-file value="$PROJECT_DIR$/frontend/src/components/page-title/page-title.test.tsx" />
+      <test-file value="$PROJECT_DIR$/frontend/src/pages/workouts/workouts-component.test.tsx" />
       <test-names>
-        <test-name value="Should render title" />
+        <test-name value="Workouts component test" />
+        <test-name value="test spy" />
       </test-names>
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Jest.Should render title" />
-        <item itemvalue="Jest.Helpers test" />
-        <item itemvalue="Jest.Helpers test.setProps Test" />
-        <item itemvalue="Jest.Helpers test.sortDistance test" />
-        <item itemvalue="Jest.Helpers test.sortDate test" />
+        <item itemvalue="Jest.Workouts component test.test spy" />
+        <item itemvalue="Jest.Workouts component test.Should render with default state" />
+        <item itemvalue="Jest.Add workout component test" />
+        <item itemvalue="Jest.Add workout component test.Should render div.error" />
+        <item itemvalue="Jest.Add workout component test.Should render component" />
       </list>
     </recent_temporary>
   </component>
@@ -177,7 +192,7 @@
       <workItem from="1599633744305" duration="4579000" />
       <workItem from="1599642810865" duration="15966000" />
       <workItem from="1599705427229" duration="31706000" />
-      <workItem from="1599830389896" duration="51014000" />
+      <workItem from="1599830389896" duration="60706000" />
     </task>
     <task id="LOCAL-00001" summary="- nginx">
       <created>1599204823761</created>
@@ -270,7 +285,14 @@
       <option name="project" value="LOCAL" />
       <updated>1600088768430</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary=":frontend:&#10;- config enzyme">
+      <created>1600092353995</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1600092353995</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -291,7 +313,8 @@
     <MESSAGE value=":frontend:&#10;- saga, api&#10;&#10;:api:&#10;- post, get" />
     <MESSAGE value=":frontend:&#10;- google chart&#10;&#10;:api:&#10;- delete" />
     <MESSAGE value=":frontend:&#10;- test&#10;- refactoring&#10;- styled css" />
-    <option name="LAST_COMMIT_MESSAGE" value=":frontend:&#10;- test&#10;- refactoring&#10;- styled css" />
+    <MESSAGE value=":frontend:&#10;- config enzyme" />
+    <option name="LAST_COMMIT_MESSAGE" value=":frontend:&#10;- config enzyme" />
   </component>
   <component name="WindowStateProjectService">
     <state x="644" y="353" key="#TSLint" timestamp="1599709613114">
@@ -302,36 +325,36 @@
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
     <state x="876" y="305" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1160@0.0.1920.1160" timestamp="1599712694741" />
-    <state x="0" y="0" key="CommitChangelistDialog2" timestamp="1600088767769">
+    <state x="0" y="0" key="CommitChangelistDialog2" timestamp="1600092353496">
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
-    <state x="0" y="0" key="CommitChangelistDialog2/0.0.1920.1160@0.0.1920.1160" timestamp="1600088767769" />
+    <state x="0" y="0" key="CommitChangelistDialog2/0.0.1920.1160@0.0.1920.1160" timestamp="1600092353496" />
     <state x="396" y="434" key="FileChooserDialogImpl" timestamp="1600091706584">
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
     <state x="0" y="549" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1599284592410" />
     <state x="396" y="434" key="FileChooserDialogImpl/0.0.1920.1160@0.0.1920.1160" timestamp="1600091706584" />
-    <state width="1877" height="324" key="GridCell.Tab.0.bottom" timestamp="1600091557501">
+    <state width="1877" height="324" key="GridCell.Tab.0.bottom" timestamp="1600146008435">
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
-    <state width="1877" height="324" key="GridCell.Tab.0.bottom/0.0.1920.1160@0.0.1920.1160" timestamp="1600091557501" />
-    <state width="1877" height="324" key="GridCell.Tab.0.center" timestamp="1600091557501">
+    <state width="1877" height="324" key="GridCell.Tab.0.bottom/0.0.1920.1160@0.0.1920.1160" timestamp="1600146008435" />
+    <state width="1877" height="324" key="GridCell.Tab.0.center" timestamp="1600146008435">
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
-    <state width="1877" height="324" key="GridCell.Tab.0.center/0.0.1920.1160@0.0.1920.1160" timestamp="1600091557501" />
-    <state width="1877" height="324" key="GridCell.Tab.0.left" timestamp="1600091557501">
+    <state width="1877" height="324" key="GridCell.Tab.0.center/0.0.1920.1160@0.0.1920.1160" timestamp="1600146008435" />
+    <state width="1877" height="324" key="GridCell.Tab.0.left" timestamp="1600146008435">
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
-    <state width="1877" height="324" key="GridCell.Tab.0.left/0.0.1920.1160@0.0.1920.1160" timestamp="1600091557501" />
-    <state width="1877" height="324" key="GridCell.Tab.0.right" timestamp="1600091557501">
+    <state width="1877" height="324" key="GridCell.Tab.0.left/0.0.1920.1160@0.0.1920.1160" timestamp="1600146008435" />
+    <state width="1877" height="324" key="GridCell.Tab.0.right" timestamp="1600146008435">
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
-    <state width="1877" height="324" key="GridCell.Tab.0.right/0.0.1920.1160@0.0.1920.1160" timestamp="1600091557501" />
-    <state x="733" y="232" key="SettingsEditor" timestamp="1599709762954">
+    <state width="1877" height="324" key="GridCell.Tab.0.right/0.0.1920.1160@0.0.1920.1160" timestamp="1600146008435" />
+    <state x="733" y="232" key="SettingsEditor" timestamp="1600146306711">
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
     <state x="733" y="208" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1599284551374" />
-    <state x="733" y="232" key="SettingsEditor/0.0.1920.1160@0.0.1920.1160" timestamp="1599709762954" />
+    <state x="733" y="232" key="SettingsEditor/0.0.1920.1160@0.0.1920.1160" timestamp="1600146306711" />
     <state x="475" y="516" key="Vcs.Push.Dialog.v2" timestamp="1600088771055">
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
@@ -352,10 +375,10 @@
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
     <state x="599" y="473" key="run.anything.popup/0.0.1920.1160@0.0.1920.1160" timestamp="1599723295010" />
-    <state x="855" y="481" width="672" height="678" key="search.everywhere.popup" timestamp="1599739853121">
+    <state x="855" y="481" width="672" height="678" key="search.everywhere.popup" timestamp="1600146576947">
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
-    <state x="855" y="481" width="672" height="678" key="search.everywhere.popup/0.0.1920.1160@0.0.1920.1160" timestamp="1599739853121" />
+    <state x="855" y="481" width="672" height="678" key="search.everywhere.popup/0.0.1920.1160@0.0.1920.1160" timestamp="1600146576947" />
   </component>
   <component name="masterDetails">
     <states>

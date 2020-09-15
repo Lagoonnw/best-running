@@ -1,9 +1,8 @@
-import React, { Fragment }     from 'react';
+import React, { Fragment }      from 'react';
 import './App.css';
-import { Switch, Route } from 'react-router-dom';
-import WorkoutsComponent       from "./pages/workouts/workouts.container";
-import AddWorkoutComponent   from "./pages/add-workout/add-workout.container";
-
+import { Switch, Route }        from 'react-router-dom';
+import WorkoutsComponent        from "./pages/workouts/workouts.container";
+import AddWorkoutComponent      from "./pages/add-workout/add-workout.container";
 
 function App() {
   return (

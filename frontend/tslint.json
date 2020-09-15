@@ -21,7 +21,7 @@
       "log"
     ],
     "adjacent-overload-signatures": false,
-    "no-shadowed-variable": false,
+    "no-shadowed-variable": true,
     "only-arrow-functions": false,
     "static-this": true,
     "triple-equals": true,
@@ -57,7 +57,7 @@
     "quotemark": [
       true,
       "single",
-      "jsx-double"
+      "jsx-single"
     ],
     "jsx-no-multiline-js": false,
     "variable-name": false,

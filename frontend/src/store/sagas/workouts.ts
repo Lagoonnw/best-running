@@ -1,8 +1,8 @@
 import { take, put, all, fork }        from 'redux-saga/effects';
-import { setWorkouts, WorkoutActions } from "../actions/workouts";
-import { api }                         from "../../services/api";
-import { ApiEndpoints }                from "../../constants/constants";
-import { Workout }                     from "../../models/Workout";
+import { setWorkouts, WorkoutActions } from '../actions/workouts';
+import { api }                         from '../../services/api';
+import { ApiEndpoints }                from '../../constants/constants';
+import { Workout }                     from '../../models/Workout';
 import { push }                        from 'connected-react-router';
 
 function* loadWorkoutsFromApi() {
