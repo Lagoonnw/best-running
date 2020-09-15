@@ -1,6 +1,6 @@
-import React         from 'react';
+import React                  from 'react';
 /** @jsx jsx */
-import { css, jsx } from '@emotion/core';
+import { css, jsx }                from '@emotion/core';
 import {
   Container,
   Row,
@@ -12,16 +12,12 @@ import {
   Breadcrumb,
   BreadcrumbItem,
   Button
-}                    from 'reactstrap';
-import { useFormik } from 'formik';
-import * as Yup      from 'yup';
-import { PageTitle } from "../../components/page-title/page-title";
-
-const initialDate = new Date()
-  .toLocaleString('en-Gb', {year: 'numeric', month: 'numeric', day: 'numeric'})
-  .split('/')
-  .reverse()
-  .join('-');
+}                             from 'reactstrap';
+import { useFormik }          from 'formik';
+import * as Yup               from 'yup';
+import { PageTitle }          from '../../components/page-title/page-title';
+import { currentDateForForm } from '../../helpers/helpers';
+import { workoutTypes }       from '../../constants/constants';
 
 export const AddWorkoutComponent = (props: any) => {
   const {addWorkout} = props;
@@ -30,7 +26,7 @@ export const AddWorkoutComponent = (props: any) => {
     initialValues   : {
       workout_type: 'Skiing',
       distance    : 1,
-      date        : initialDate,
+      date        : currentDateForForm(),
     },
     validationSchema: Yup.object({
       workout_type: Yup.string()
@@ -42,8 +38,6 @@ export const AddWorkoutComponent = (props: any) => {
         .required('Required'),
     }),
     onSubmit        : values => {
-      // console.log('date from form', year, month, day, new Date(+year, +month, +day));
-      // console.log('date from form', new Date(values.date));
       addWorkout({...values, date: new Date(values.date)});
     },
   });
@@ -66,10 +60,9 @@ export const AddWorkoutComponent = (props: any) => {
                 id="workout_type"
                 {...formik.getFieldProps('workout_type')}
               >
-                <option>Skiing</option>
-                <option>Walk</option>
-                <option>Running</option>
-                <option>Bike</option>
+                {workoutTypes.map((t) => (
+                  <option key={t}>{ t }</option>
+                ))}
               </Input>
               {formik.touched.workout_type && formik.errors.workout_type ? (
                 <div className='error'>{formik.errors.workout_type}</div>
@@ -110,4 +103,3 @@ export const AddWorkoutComponent = (props: any) => {
     </Container>
   )
 }
-

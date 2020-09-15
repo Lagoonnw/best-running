@@ -8,7 +8,8 @@ export const Chart = (props: { workouts: Workout[] }) => {
   const [workouts, setState] = useState(props.workouts);
   useEffect(() => {
     setState([...props.workouts]);
-  }, [props.workouts])
+  }, [props.workouts]);
+  
   const workoutsToDisplay = dateSort(workouts, 'latest').slice(0, 5).reverse().map((w: Workout) => ( [
     `${w.getFormattedDate()}: ${w.workout_type}`, ( w.distance / 1000 )
   ] ));

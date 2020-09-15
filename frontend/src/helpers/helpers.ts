@@ -21,6 +21,12 @@ export const dateSort = (workouts: Workout[], type: string): Workout[] => (
   workouts.sort((a, b) => b.date.getTime() - a.date.getTime())
 )
 
+export const currentDateForForm = (): string => new Date()
+  .toLocaleString('en-Gb', {year: 'numeric', month: 'numeric', day: 'numeric'})
+  .split('/')
+  .reverse()
+  .join('-');
+
 export default {
   setProps,
   typeFilter,
