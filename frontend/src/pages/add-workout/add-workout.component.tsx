@@ -56,7 +56,6 @@ export const AddWorkoutComponent = (props: any) => {
               <Label htmlFor="workout_type" for="workout_type">Select a workout type</Label>
               <Input
                 type="select"
-                name="workout_type"
                 id="workout_type"
                 {...formik.getFieldProps('workout_type')}
               >
