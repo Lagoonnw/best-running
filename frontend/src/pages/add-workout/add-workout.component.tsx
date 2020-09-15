@@ -42,8 +42,9 @@ export const AddWorkoutComponent = (props: any) => {
         .required('Required'),
     }),
     onSubmit        : values => {
-      const [year, month, day] = values.date.split('-');
-      addWorkout({...values, date: new Date(+year, +month, +day)});
+      // console.log('date from form', year, month, day, new Date(+year, +month, +day));
+      // console.log('date from form', new Date(values.date));
+      addWorkout({...values, date: new Date(values.date)});
     },
   });
   

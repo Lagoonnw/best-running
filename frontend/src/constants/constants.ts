@@ -1,4 +1,4 @@
-export const BASE_API_URL = 'http://app-test.com/api';
+export const BASE_API_URL = 'http://127.0.0.1:80/api';
 export const workoutTypes = ['Walk', 'Bike', 'Running', 'Skiing'];
 export const sortDateTypes = ['latest', 'earliest'];
 export const sortDistanceTypes = ['longest', 'shortest'];
