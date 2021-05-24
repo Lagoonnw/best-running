@@ -12,12 +12,12 @@ export const initStore = (history: History): Store => {
   const middlewareEnhancer = applyMiddleware(...middlewares);
   const enhancers = [middlewareEnhancer];
   // @ts-ignore -> ts window and redux dev tolls
-  const composedEns = compose(...enhancers, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
+  const composedEns = compose(...enhancers);
   // @ts-ignore -> earlier ignore block
   const store = createStore(reducer(history), composedEns);
-  
+
   //run sagas
   sagaMiddleware.run(root);
-  
+
   return store;
 }
